@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box; }
+
+html, body {
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #888888;
+  background: #eff4f6;
+  line-height: 1.6; }
+
+h1 {
+  color: #444444;
+  line-height: 1.2;
+  letter-spacing: 1.1px; }
+
+a {
+  color: #888888;
+  text-decoration: none; }
+
+input, button {
+  outline: none; }
+
+.container {
+  max-width: 500px;
+  margin: 0 auto; }
+
+.brickwork-logo {
+  background: url("../images/logo.svg") no-repeat center;
+  height: 2.5em;
+  margin: 2em auto; }
+
+.loginForm {
+  background: #ffffff;
+  border-radius: 4px;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1); }
+  .loginForm__title {
+    margin: 0;
+    padding: 1em 2.5rem;
+    border-bottom: 1px solid #eff4f6; }
+  .loginForm__body {
+    padding: 1.4em 2.5rem 2.5em; }
+  .loginForm__inputGroup {
+    margin-bottom: 1em; }
+    .loginForm__inputGroup label, .loginForm__inputGroup input {
+      display: block; }
+    .loginForm__inputGroup label {
+      font-size: 0.8em; }
+    .loginForm__inputGroup input {
+      width: 100%;
+      padding: 1em;
+      font-size: 0.8em;
+      color: #444444;
+      background: #eff4f6;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      transition: all 0.3s ease; }
+      .loginForm__inputGroup input:hover {
+        border: 1px solid #888888; }
+    .loginForm__inputGroup input.invalid {
+      border: 1px solid #ff3d3c;
+      background: #ffd5d5; }
+    .loginForm__inputGroup input.valid {
+      border: 1px solid #42d895;
+      background: #c1f2dc; }
+    .loginForm__inputGroup input.focused {
+      border: 1px solid #888888;
+      background: #eff4f6; }
+  .loginForm__actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0 2.5em;
+    margin: 2em 0 .8em;
+    border-bottom: 1px solid #eff4f6; }
+  .loginForm__rememberMe input, .loginForm__rememberMe label {
+    cursor: pointer; }
+  .loginForm__rememberMe input {
+    visibility: hidden; }
+  .loginForm__rememberMe label:before {
+    content: '';
+    position: relative;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    left: -1.4em;
+    margin-right: -0.8em;
+    vertical-align: middle;
+    background: #eff4f6;
+    border-radius: 4px; }
+  .loginForm__rememberMe input:checked + label:before {
+    background-image: url(../images/checkmark.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 12px 12px; }
+  .loginForm__loginButton button {
+    position: relative;
+    cursor: pointer;
+    height: 2.8em;
+    width: 9em;
+    padding: 0;
+    font-size: 1em;
+    font-weight: 700;
+    color: #ffffff;
+    background-color: #42d895;
+    border: none;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    z-index: 1; }
+    .loginForm__loginButton button:before {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: #6ce1ad;
+      opacity: 1;
+      border-radius: 4px;
+      transition: all .2s linear;
+      z-index: -1; }
+    .loginForm__loginButton button:hover:before {
+      width: 100%; }
+
+.signUp {
+  text-align: center; }
+  .signUp a {
+    color: #42d895;
+    font-weight: 700; }
+
+.error {
+  display: none;
+  font-size: 0.9em;
+  color: #ff3d3c; }
+
+@media (max-width: 468px) {
+  .loginForm__body {
+    padding: 1.4em 1.5em 2.5em; } }
+
+/*# sourceMappingURL=style.css.map */

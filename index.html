@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="./public/styles/style.css">
+  <title>Front End Assessment - Login Form</title>
+</head>
+<body>
+<main>
+  <section id="login">
+    <div class="container">
+      <header>
+        <div class="brickwork-logo"></div>
+      </header>
+      <form id="loginForm" action="" method="post" class="loginForm">
+        <header>
+          <h1 class="loginForm__title">Login</h1>
+        </header>
+        <div class="loginForm__body">
+          <div class="loginForm__inputGroup loginForm__inputGroup--email">
+            <label for="email">EMAIL</label>
+            <input type="email" name="email" id="email" required>
+            <div id="error" class="error">Please enter a valid email address</div>
+          </div>
+          <div class="loginForm__inputGroup loginForm__inputGroup--password">
+            <label for="password">PASSWORD</label>
+            <input type="password" name="password" id="password" required>
+          </div>
+          <div class="loginForm__actions">
+            <div class="loginForm__rememberMe">
+              <input type="checkbox" name="rememberMe" id="rememberMe">
+              <label for="rememberMe">Remember Me</label>
+            </div>
+            <div class="loginForm__loginButton">
+              <button id="submit" type="submit" name="login">LOGIN</button>
+            </div>
+          </div>
+          <div class="loginForm__forgotPassword">
+            <a href="#!">Forgot Password?</a>
+          </div>
+        </div>
+      </form>
+      <footer>
+        <div class="signUp">
+          <p>Don't have an account? <a href="#!">Register Now</a></p>
+        </div>
+      </footer>
+    </div>
+  </section>
+</main>
+<script src="./public/js/index.js"></script>
+</body>
+</html>

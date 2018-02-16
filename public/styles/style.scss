@@ -1,0 +1,186 @@
+// Variables
+$primary-gray: #eff4f6;
+$primary-green: #42d895;
+$primary-red: #ff3d3c;
+$primary-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
+$primary-borderRadius: 4px;
+$primary-transition-time: 0.3s;
+
+// Global styles
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #888888;
+  background: $primary-gray;
+  line-height: 1.6;
+}
+
+h1 {
+  color: #444444;
+  line-height: 1.2;
+  letter-spacing: 1.1px;
+}
+
+a {
+  color: #888888;
+  text-decoration: none;
+}
+
+input, button {
+  outline: none;
+}
+
+// General styles
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.brickwork-logo {
+  background: url("../images/logo.svg") no-repeat center;
+  height: 2.5em;
+  margin: 2em auto;
+}
+
+.loginForm {
+  background: #ffffff;
+  border-radius: $primary-borderRadius;
+  box-shadow: $primary-shadow;
+  &__title {
+    margin: 0;
+    padding: 1em 2.5rem;
+    border-bottom: 1px solid $primary-gray;
+  }
+  &__body {
+    padding: 1.4em 2.5rem 2.5em;
+  }
+  &__inputGroup {
+    margin-bottom: 1em;
+    label, input {
+      display: block;
+    }
+    label {
+      font-size: 0.8em;
+    }
+    input {
+      width: 100%;
+      padding: 1em;
+      font-size: 0.8em;
+      color: #444444;
+      background: $primary-gray;
+      border: 1px solid transparent;
+      border-radius: $primary-borderRadius;
+      transition: all $primary-transition-time ease;
+      &:hover {
+        border: 1px solid #888888;
+      }
+    }
+    input.invalid {
+      border: 1px solid $primary-red;
+      background: lighten($primary-red, 30%);
+    }
+
+    input.valid {
+      border: 1px solid $primary-green;
+      background: lighten($primary-green, 30%);
+    }
+    input.focused {
+      border: 1px solid #888888;
+      background: $primary-gray;
+    }
+  }
+  &__actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0 2.5em;
+    margin: 2em 0 .8em;
+    border-bottom: 1px solid $primary-gray;
+  }
+  &__rememberMe {
+    input, label {
+      cursor: pointer;
+    }
+    input {
+      visibility: hidden;
+    }
+    label:before {
+      content: '';
+      position: relative;
+      display: inline-block;
+      width: 25px;
+      height: 25px;
+      left: -1.4em;
+      margin-right: -0.8em;
+      vertical-align: middle;
+      background: $primary-gray;
+      border-radius: $primary-borderRadius;
+    }
+    input:checked + label:before {
+      background-image: url(../images/checkmark.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 12px 12px;
+    }
+  }
+  &__loginButton {
+    button {
+      position: relative;
+      cursor: pointer;
+      height: 2.8em;
+      width: 9em;
+      padding: 0;
+      font-size: 1em;
+      font-weight: 700;
+      color: #ffffff;
+      background-color: $primary-green;
+      border: none;
+      border-radius: $primary-borderRadius;
+      transition: all $primary-transition-time ease;
+      z-index: 1;
+      &:before {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: lighten($primary-green, 10%);
+        opacity: 1;
+        border-radius: $primary-borderRadius;
+        transition: all .2s linear;
+        z-index: -1;
+      }
+      &:hover:before {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.signUp {
+  text-align: center;
+  a {
+    color: $primary-green;
+    font-weight: 700;
+  }
+}
+
+.error {
+  display: none;
+  font-size: 0.9em;
+  color: $primary-red;
+}
+
+@media (max-width: 468px) {
+  .loginForm__body {
+    padding: 1.4em 1.5em 2.5em;
+  }
+}
+
+
