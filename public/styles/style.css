@@ -87,7 +87,11 @@ input, button {
     margin-right: -0.8em;
     vertical-align: middle;
     background: #eff4f6;
-    border-radius: 4px; }
+    border: 1px solid transparent;
+    border-radius: 4px;
+    transition: border 0.3s ease; }
+  .loginForm__rememberMe label:hover:before {
+    border: 1px solid #888888; }
   .loginForm__rememberMe input:checked + label:before {
     background-image: url(../images/checkmark.svg);
     background-repeat: no-repeat;

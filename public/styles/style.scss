@@ -119,7 +119,12 @@ input, button {
       margin-right: -0.8em;
       vertical-align: middle;
       background: $primary-gray;
+      border: 1px solid transparent;
       border-radius: $primary-borderRadius;
+      transition: border $primary-transition-time ease;
+    }
+    label:hover:before {
+      border: 1px solid #888888;
     }
     input:checked + label:before {
       background-image: url(../images/checkmark.svg);
